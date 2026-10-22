@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/crewloom/crewloom">Agent toolkit</a> ·
   <a href="https://github.com/crewloom/bridge">Operations bridge</a> ·
-  <a href="https://rumuze.com">Rumuze</a> ·
+  <a href="https://crewloom.org">Rumuze</a> ·
   <a href="#-enterprise--commercial-solutions">Enterprise</a>
 </p>
 
@@ -34,7 +34,7 @@ Crewloom is an open-source initiative and engineering umbrella for structured, v
 
 ### 🏢 Enterprise & Commercial Solutions
 
-Crewloom offers dedicated enterprise engineering and commercial licensing through **[Rumuze](https://rumuze.com)**:
+Crewloom offers dedicated enterprise engineering and commercial licensing through **[Rumuze](https://crewloom.org)**:
 
 - **Private & Closed-Source Agent Fleets:** Tailored specialist roles, custom toolkits, and proprietary company skills.
 - **On-Premise & VPC Deployments:** Zero-telemetry, fully isolated agent architectures compliant with strict data residency and corporate security requirements.
@@ -42,7 +42,7 @@ Crewloom offers dedicated enterprise engineering and commercial licensing throug
 - **Consulting & Implementation:** End-to-end architecture advisory for organizations transitioning to agentic workflows.
 
 > For commercial inquiries, licensing, and enterprise pilot programs, please reach out to:  
-> **Email:** [support@rumuze.com](mailto:support@rumuze.com) | **Web:** [rumuze.com](https://rumuze.com)
+> **Email:** [support@crewloom.org](mailto:support@crewloom.org) | **Web:** [rumuze.com](https://crewloom.org)
 
 ---
 
@@ -59,7 +59,7 @@ We treat security as a first-class requirement across all open-source and enterp
 
 ### كرو لوم — أدوات عملية وموثوقة لأنظمة وكلاء الذكاء الاصطناعي
 
-مبادرة تقنية مفتوحة المصدر من **[رموز — Rumuze](https://rumuze.com)** لتنظيم وتشغيل وكلاء الذكاء الاصطناعي باحترافية وأمان: أدوار تخصصية، سياق واضح وموثّق لكل مشروع، ذاكرة عمل دائمة، وأدوات رقابة وتحقق حية.
+مبادرة تقنية مفتوحة المصدر من **[رموز — Rumuze](https://crewloom.org)** لتنظيم وتشغيل وكلاء الذكاء الاصطناعي باحترافية وأمان: أدوار تخصصية، سياق واضح وموثّق لكل مشروع، ذاكرة عمل دائمة، وأدوات رقابة وتحقق حية.
 
 - **أدوات الوكلاء — [Crewloom Core](https://github.com/crewloom/crewloom):** مكتبة تضم 43 دوراً تخصصياً، 19 أداة عملية، ونماذج صارمة للذاكرة وعقود البيانات (ثنائية اللغة EN/AR).
 - **غرفة التحكم والجسر — [Crewloom Bridge](https://github.com/crewloom/bridge):** جسر تشغيل ومراقبة عن بُعد يربط محركات الوكلاء المختلفة بقنوات التواصل (Telegram، واتساب، Webhooks) مع دعم QR Pairing والتحكم اللحظي.
@@ -70,6 +70,6 @@ We treat security as a first-class requirement across all open-source and enterp
 - **أدوار وأدوات مخصصة (Custom Skills):** بناء وتدريب أدوار تخصصية تتناسب بدقة مع النظم واللوائح الداخلية لمؤسستك.
 - **عقود دعم ومستوى خدمة (Enterprise SLA):** دعم فني وتطوير مستمر لضمان استقرار العمليات في بيئات الإنتاج الحساسة.
 
-**للتواصل التجاري والشراكات:** [support@rumuze.com](mailto:support@rumuze.com) · [rumuze.com](https://rumuze.com)
+**للتواصل التجاري والشراكات:** [support@crewloom.org](mailto:support@crewloom.org) · [rumuze.com](https://crewloom.org)
 
 </div>
