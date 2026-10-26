@@ -25,10 +25,14 @@ Crewloom is an open-source initiative and engineering umbrella for structured, v
 
 ### Our Projects
 
+<!-- projects:start -->
 | Project | Status | Description | Repository |
 | :--- | :---: | :--- | :--- |
-| **Crewloom Core** | `v1.0.0` | 43 specialist agent roles, 19 practical tools, working memory contracts, and isolated execution. Bilingual (EN/AR). Apache-2.0. | [Explore Toolkit →](https://github.com/crewloom/crewloom) |
-| **Crewloom Bridge** | `v2.1.0` | Omni-channel mediator & control room daemon. Connects local agent runs to remote chats with live status, context inspection, and QR pairing. | [Explore Bridge →](https://github.com/crewloom/bridge) |
+| **Crewloom Core** | `v0.9.1` | 47 specialist agent roles, 24 registered tools, working memory contracts, MCP bridge, and isolated execution. Bilingual (EN/AR). Apache-2.0. | [Explore Toolkit →](https://github.com/crewloom/crewloom) |
+| **Crewloom Bridge** | `v2.2.2` | Omni-channel mediator & control room daemon. Connects local agent runs to remote chats with live status, context inspection, and QR pairing. | [Explore Bridge →](https://github.com/crewloom/bridge) |
+| **Crewloom Desktop Agent** | `v0.3.5` | Desktop app for agent work with roles, memory, and evidence. Proprietary runtime; downloads and release notes are published with the website. | [Download →](https://github.com/crewloom/crewloom.github.io/releases/latest) |
+| **Crewloom Website** | `v1.0.3` | Landing page and documentation at crewloom.org, in English and Arabic. | [crewloom.org →](https://crewloom.org) |
+<!-- projects:end -->
 
 ---
 
@@ -61,8 +65,11 @@ We treat security as a first-class requirement across all open-source and enterp
 
 مبادرة تقنية مفتوحة المصدر من **[رموز — Rumuze](https://crewloom.org)** لتنظيم وتشغيل وكلاء الذكاء الاصطناعي باحترافية وأمان: أدوار تخصصية، سياق واضح وموثّق لكل مشروع، ذاكرة عمل دائمة، وأدوات رقابة وتحقق حية.
 
-- **أدوات الوكلاء — [Crewloom Core](https://github.com/crewloom/crewloom):** مكتبة تضم 43 دوراً تخصصياً، 19 أداة عملية، ونماذج صارمة للذاكرة وعقود البيانات (ثنائية اللغة EN/AR).
+<!-- projects-ar:start -->
+- **أدوات الوكلاء — [Crewloom Core](https://github.com/crewloom/crewloom):** مكتبة تضم 47 دوراً تخصصياً، 24 أداة عملية، ونماذج صارمة للذاكرة وعقود البيانات (ثنائية اللغة EN/AR).
 - **غرفة التحكم والجسر — [Crewloom Bridge](https://github.com/crewloom/bridge):** جسر تشغيل ومراقبة عن بُعد يربط محركات الوكلاء المختلفة بقنوات التواصل (Telegram، واتساب، Webhooks) مع دعم QR Pairing والتحكم اللحظي.
+- **تطبيق سطح المكتب — [Crewloom Desktop Agent](https://github.com/crewloom/crewloom.github.io/releases/latest):** تطبيق للعمل مع الوكلاء بأدوار وذاكرة ودليل على كل نتيجة (التشغيل مغلق المصدر).
+<!-- projects-ar:end -->
 
 #### حلول الشركات والمؤسسات (Enterprise)
 نقدم من خلال **Rumuze** حلولاً متقدمة للشركات والمؤسسات التي تبني فرق وكلاء ذكاء اصطناعي داخلية:
