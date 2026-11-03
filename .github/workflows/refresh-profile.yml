@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: refresh-profile
@@ -21,14 +22,26 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/recent-releases.mjs profile/README.md
-      - name: Commit when changed
+      # main requires a pull request; the bot opens one per refresh and the owner merges it.
+      - name: Open a refresh PR when changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- profile/README.md; then
             echo "No new releases."
             exit 0
           fi
+          branch="bot/refresh-profile"
           git config user.name "crewloom-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$branch"
           git add profile/README.md
           git commit -m "docs(profile): refresh recent releases"
-          git push
+          # Replace the bot branch only if it still points where we last saw it (empty = must not exist).
+          expected="$(git ls-remote --heads origin "$branch" | cut -f1)"
+          git push --force-with-lease="$branch:$expected" origin "$branch"
+          if [ -n "$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')" ]; then
+            echo "Updated the open refresh PR."
+          else
+            gh pr create --base main --head "$branch" --title "docs(profile): refresh recent releases" --body "Automated refresh of the Recent releases table from GitHub releases."
+          fi
