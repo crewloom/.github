@@ -28,11 +28,32 @@ Crewloom is an open-source initiative and engineering umbrella for structured, v
 <!-- projects:start -->
 | Project | Status | Description | Repository |
 | :--- | :---: | :--- | :--- |
-| **Crewloom Core** | `v0.9.1` | 47 specialist agent roles, 24 registered tools, working memory contracts, MCP bridge, and isolated execution. Bilingual (EN/AR). Apache-2.0. | [Explore Toolkit →](https://github.com/crewloom/crewloom) |
-| **Crewloom Bridge** | `v2.2.2` | Omni-channel mediator & control room daemon. Connects local agent runs to remote chats with live status, context inspection, and QR pairing. | [Explore Bridge →](https://github.com/crewloom/bridge) |
-| **Crewloom Desktop Agent** | `v0.3.5` | Desktop app for agent work with roles, memory, and evidence. Proprietary runtime; downloads and release notes are published with the website. | [Download →](https://github.com/crewloom/crewloom.github.io/releases/latest) |
-| **Crewloom Website** | `v1.0.3` | Landing page and documentation at crewloom.org, in English and Arabic. | [crewloom.org →](https://crewloom.org) |
+| **Crewloom Core** | `v0.9.10` | 47 specialist agent roles, 24 registered tools, working memory contracts, MCP bridge, and isolated execution. Bilingual (EN/AR). Apache-2.0. | [Explore Toolkit →](https://github.com/crewloom/crewloom) |
+| **Crewloom Bridge** | `v2.2.3` | Omni-channel mediator & control room daemon. Connects local agent runs to remote chats with live status, context inspection, and QR pairing. | [Explore Bridge →](https://github.com/crewloom/bridge) |
+| **Crewloom Desktop Agent** | `v0.5.10` | Desktop app for agent work with roles, memory, and evidence. Proprietary runtime; downloads and release notes are published with the website. | [Download →](https://github.com/crewloom/crewloom.github.io/releases/latest) |
+| **Crewloom AI · Pulse** | `v0.2.0` | Local decision engine for routing agent work on-device (System 1). Research stage; private. | Private |
+| **Crewloom Website** | `v1.0.12` | Landing page and documentation at crewloom.org, in English and Arabic. | [crewloom.org →](https://crewloom.org) |
+
+<p align="center">
+<a href="https://github.com/crewloom/crewloom/releases"><img alt="crewloom releases" src="https://img.shields.io/github/v/release/crewloom/crewloom?label=crewloom&style=flat-square"></a> <a href="https://github.com/crewloom/crewloom/commits"><img alt="crewloom commits" src="https://img.shields.io/github/last-commit/crewloom/crewloom?label=updated&style=flat-square"></a><br>
+<a href="https://github.com/crewloom/bridge/releases"><img alt="bridge releases" src="https://img.shields.io/github/v/release/crewloom/bridge?label=bridge&style=flat-square"></a> <a href="https://github.com/crewloom/bridge/commits"><img alt="bridge commits" src="https://img.shields.io/github/last-commit/crewloom/bridge?label=updated&style=flat-square"></a><br>
+<a href="https://github.com/crewloom/crewloom.github.io/releases"><img alt="crewloom.github.io releases" src="https://img.shields.io/github/v/release/crewloom/crewloom.github.io?label=crewloom.github.io&style=flat-square"></a> <a href="https://github.com/crewloom/crewloom.github.io/commits"><img alt="crewloom.github.io commits" src="https://img.shields.io/github/last-commit/crewloom/crewloom.github.io?label=updated&style=flat-square"></a>
+</p>
 <!-- projects:end -->
+
+### Recent releases
+
+<!-- releases:start -->
+| Date | Release | Repository |
+| :--- | :--- | :--- |
+| 2026-11-01 | [Crewloom Desktop Agent v0.5.10](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.10) | `crewloom.github.io` |
+| 2026-10-31 | [Crewloom Desktop Agent v0.5.6](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.6) | `crewloom.github.io` |
+| 2026-10-31 | [Crewloom Core v0.9.10](https://github.com/crewloom/crewloom/releases/tag/v0.9.10) | `crewloom` |
+| 2026-10-31 | [Crewloom Core v0.9.9](https://github.com/crewloom/crewloom/releases/tag/v0.9.9) | `crewloom` |
+| 2026-10-31 | [Crewloom Desktop Agent v0.4.19](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.4.19) | `crewloom.github.io` |
+| 2026-10-31 | [Crewloom Core v0.9.8](https://github.com/crewloom/crewloom/releases/tag/v0.9.8) | `crewloom` |
+<!-- releases:end -->
+<sub>Refreshed daily from GitHub releases by <a href="https://github.com/crewloom/.github/actions/workflows/refresh-profile.yml">this workflow</a>.</sub>
 
 ---
 
@@ -68,6 +89,7 @@ We treat security as a first-class requirement across all open-source and enterp
 <!-- projects-ar:start -->
 - **أدوات الوكلاء — [Crewloom Core](https://github.com/crewloom/crewloom):** مكتبة تضم 47 دوراً تخصصياً، 24 أداة عملية، ونماذج صارمة للذاكرة وعقود البيانات (ثنائية اللغة EN/AR).
 - **غرفة التحكم والجسر — [Crewloom Bridge](https://github.com/crewloom/bridge):** جسر تشغيل ومراقبة عن بُعد يربط محركات الوكلاء المختلفة بقنوات التواصل (Telegram، واتساب، Webhooks) مع دعم QR Pairing والتحكم اللحظي.
+- **محرك القرار المحلي — Crewloom AI · Pulse:** محرك قرار يعمل على الجهاز لتوجيه مهام الوكلاء (System 1)، في مرحلة البحث (مستودع خاص، v0.2.0).
 - **تطبيق سطح المكتب — [Crewloom Desktop Agent](https://github.com/crewloom/crewloom.github.io/releases/latest):** تطبيق للعمل مع الوكلاء بأدوار وذاكرة ودليل على كل نتيجة (التشغيل مغلق المصدر).
 <!-- projects-ar:end -->
 
