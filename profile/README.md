@@ -12,6 +12,8 @@
   <a href="#-enterprise--commercial-solutions">Enterprise</a>
 </p>
 
+<p align="center"><strong>English</strong> · <a href="https://github.com/crewloom/.github/blob/main/profile/README.ar.md">العربية</a></p>
+
 ---
 
 ### What is Crewloom?
@@ -77,28 +79,3 @@ We treat security as a first-class requirement across all open-source and enterp
 - **Zero-Data Retention:** Agents process data within your defined perimeter without unauthorized external sync.
 - **Coordinated Disclosure:** Review our [Security Policy](https://github.com/crewloom/.github/blob/main/SECURITY.md) to report vulnerabilities privately.
 - **Community Standards:** Built in accordance with our [Code of Conduct](https://github.com/crewloom/.github/blob/main/CODE_OF_CONDUCT.md).
-
----
-
-<div dir="rtl">
-
-### كرو لوم — أدوات عملية وموثوقة لأنظمة وكلاء الذكاء الاصطناعي
-
-مبادرة تقنية مفتوحة المصدر من **[رموز — Rumuze](https://crewloom.org)** لتنظيم وتشغيل وكلاء الذكاء الاصطناعي باحترافية وأمان: أدوار تخصصية، سياق واضح وموثّق لكل مشروع، ذاكرة عمل دائمة، وأدوات رقابة وتحقق حية.
-
-<!-- projects-ar:start -->
-- **أدوات الوكلاء — [Crewloom Core](https://github.com/crewloom/crewloom):** مكتبة تضم 47 دوراً تخصصياً، 24 أداة عملية، ونماذج صارمة للذاكرة وعقود البيانات (ثنائية اللغة EN/AR).
-- **غرفة التحكم والجسر — [Crewloom Bridge](https://github.com/crewloom/bridge):** جسر تشغيل ومراقبة عن بُعد يربط محركات الوكلاء المختلفة بقنوات التواصل (Telegram، واتساب، Webhooks) مع دعم QR Pairing والتحكم اللحظي.
-- **محرك القرار المحلي — Crewloom AI · Pulse:** محرك قرار يعمل على الجهاز لتوجيه مهام الوكلاء (System 1)، في مرحلة البحث (مستودع خاص، v0.2.0).
-- **تطبيق سطح المكتب — [Crewloom Desktop Agent](https://github.com/crewloom/crewloom.github.io/releases/latest):** تطبيق للعمل مع الوكلاء بأدوار وذاكرة ودليل على كل نتيجة (التشغيل مغلق المصدر).
-<!-- projects-ar:end -->
-
-#### حلول الشركات والمؤسسات (Enterprise)
-نقدم من خلال **Rumuze** حلولاً متقدمة للشركات والمؤسسات التي تبني فرق وكلاء ذكاء اصطناعي داخلية:
-- **نشر مغلق ومعزول (Private & On-Prem):** بيئات عمل معزولة تماماً تضمن سرية البيانات وعدم تسريب أي معلومات عمل.
-- **أدوار وأدوات مخصصة (Custom Skills):** بناء وتدريب أدوار تخصصية تتناسب بدقة مع النظم واللوائح الداخلية لمؤسستك.
-- **عقود دعم ومستوى خدمة (Enterprise SLA):** دعم فني وتطوير مستمر لضمان استقرار العمليات في بيئات الإنتاج الحساسة.
-
-**للتواصل التجاري والشراكات:** [support@crewloom.org](mailto:support@crewloom.org) · [rumuze.com](https://crewloom.org)
-
-</div>
