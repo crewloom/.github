@@ -48,12 +48,12 @@ Crewloom is an open-source initiative and engineering umbrella for structured, v
 <!-- releases:start -->
 | Date | Release | Repository |
 | :--- | :--- | :--- |
-| 2026-11-01 | [Crewloom Desktop Agent v0.5.10](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.10) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Desktop Agent v0.5.6](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.6) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Core v0.9.10](https://github.com/crewloom/crewloom/releases/tag/v0.9.10) | `crewloom` |
-| 2026-10-31 | [Crewloom Core v0.9.9](https://github.com/crewloom/crewloom/releases/tag/v0.9.9) | `crewloom` |
-| 2026-10-31 | [Crewloom Desktop Agent v0.4.19](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.4.19) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Core v0.9.8](https://github.com/crewloom/crewloom/releases/tag/v0.9.8) | `crewloom` |
+| 2026-11-14 | [Crewloom Desktop Agent v0.26.1](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.26.1) | `crewloom.github.io` |
+| 2026-11-12 | [Crewloom Core v0.9.23](https://github.com/crewloom/crewloom/releases/tag/v0.9.23) | `crewloom` |
+| 2026-11-11 | [Crewloom Desktop Agent v0.23.5](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.23.5) | `crewloom.github.io` |
+| 2026-11-11 | [Crewloom Desktop Agent v0.23.3](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.23.3) | `crewloom.github.io` |
+| 2026-11-11 | [Crewloom Desktop Agent v0.23.2](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.23.2) | `crewloom.github.io` |
+| 2026-11-09 | [Crewloom Desktop Agent v0.22.1](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.22.1) | `crewloom.github.io` |
 <!-- releases:end -->
 <sub>Refreshed daily from GitHub releases by <a href="https://github.com/crewloom/.github/actions/workflows/refresh-profile.yml">this workflow</a>.</sub>
 
