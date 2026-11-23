@@ -2,7 +2,7 @@
 
 # Crewloom
 
-Practical tools for AI agent work. Built by Rumuze.
+Practical tools for AI agent work.
 
 [العربية](README.ar.md) · [Product website](https://crewloom.org)
 
