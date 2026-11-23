@@ -1,6 +1,6 @@
 # Crewloom organization profile
 
-Public GitHub profile and shared brand assets for [Crewloom](https://github.com/crewloom), an open-source initiative by [Rumuze](https://rumuze.com).
+Public GitHub profile and shared brand assets for [Crewloom](https://github.com/crewloom), an open-source initiative.
 
 - `profile/README.md`: public organization overview, English and Arabic.
 - `assets/crewloom-logo.svg`: reusable vector mark, the woven Crewloom mark.
