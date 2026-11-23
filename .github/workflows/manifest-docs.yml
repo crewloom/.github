@@ -1,0 +1,62 @@
+name: Manifest documentation sync
+
+on:
+  pull_request:
+    paths:
+      - crewloom-manifest.json
+      - scripts/sync-docs.py
+      - scripts/test-sync-docs.py
+      - .github/workflows/manifest-docs.yml
+  schedule:
+    - cron: '43 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: manifest-docs-${{ github.event_name == 'pull_request' && github.ref || 'scheduled' }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test-sync-docs.py -v
+
+  sync:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate preview from public sources
+        run: python scripts/sync-docs.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manifest-docs-preview
+          path: sync-output/
+          retention-days: 14
+      - name: Open review PRs only when owner has configured scoped access
+        env:
+          GH_TOKEN: ${{ secrets.CREWLOOM_DOCS_SYNC_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$GH_TOKEN" ]; then
+            echo 'Preview generated. Cross-repository PR writing is not configured.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh auth setup-git
+          python scripts/sync-docs.py --publish

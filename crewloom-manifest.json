@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "organization": "crewloom",
+  "projects": [
+    {"id": "core", "repository": "crewloom", "ref": "main", "version_file": "pyproject.toml", "format": "toml", "output": "documentation/CREWLOOM_FACTS.md", "counts": {"skill_files": {"glob": ".agents/skills/*/SKILL.md"}, "registered_tools": {"json_file": "documentation/TOOLS.json", "key": "tools"}}},
+    {"id": "bridge", "repository": "bridge", "ref": "main", "version_file": "package.json", "format": "json", "output": "docs/CREWLOOM_FACTS.md", "counts": {}},
+    {"id": "website", "repository": "crewloom.github.io", "ref": "main", "version_file": "package.json", "format": "json", "output": "docs/CREWLOOM_FACTS.md", "counts": {}}
+  ],
+  "decisions_required": [
+    "Bridge canonical product/package naming remains an owner decision. Existing package names are reported verbatim, not endorsed or changed.",
+    "Domains and support addresses are not inferred or changed.",
+    "Private repositories are excluded until the owner approves the source fields, public/private destination and scoped access.",
+    "Website runtime metrics and release/download metadata are not modified by this documentation sync."
+  ]
+}
