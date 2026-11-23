@@ -1,81 +1,47 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/crewloom/.github/main/assets/crewloom-banner.svg" width="100%" alt="Crewloom — Give agent work a role, memory, and evidence." />
-</p>
+<p align="center"><img src="https://raw.githubusercontent.com/crewloom/.github/main/assets/crewloom-banner.svg" width="100%" alt="Crewloom: roles, memory and evidence for agent work" /></p>
 
-<p align="center"><strong>Practical tools for AI agents and the people who run them.</strong></p>
-<p align="center">Specialist roles · Working memory · Remote agent operations</p>
+# Crewloom
 
-<p align="center">
-  <a href="https://github.com/crewloom/crewloom">Agent toolkit</a> ·
-  <a href="https://github.com/crewloom/bridge">Operations bridge</a> ·
-  <a href="https://crewloom.org">Rumuze</a> ·
-  <a href="#-enterprise--commercial-solutions">Enterprise</a>
-</p>
+Practical tools for AI agent work.
 
-<p align="center"><strong>English</strong> · <a href="https://github.com/crewloom/.github/blob/main/profile/README.ar.md">العربية</a></p>
+[العربية](README.ar.md) · [Product website](https://crewloom.org)
 
----
+## Projects
 
-### What is Crewloom?
+Versions below are an audit snapshot from 2026-11-23, not a live deployment guarantee. Each component is versioned separately.
 
-Crewloom is an open-source initiative and engineering umbrella for structured, verifiable AI agent systems. We provide:
-1. **Specialist Roles & Skills:** Domain-expert agent personas with strict zero-destruction policies and measured facts.
-2. **Working Memory & Context:** Architecture contracts that prevent hallucination and keep project context tightly scoped.
-3. **Control Room & Omni-Channel Bridge:** Seamless mediation between autonomous agent engines (OpenCode, Claude Code, custom runtimes) and communication channels (Telegram, WhatsApp, Webhooks).
+| Project | Published version | What is available |
+| --- | --- | --- |
+| [Core toolkit](https://github.com/crewloom/crewloom) | v0.9.24 | 47 specialist role guides, 24 registered tools, working-memory contracts, an MCP bridge and managed Docker execution. Apache-2.0. |
+| [Operations bridge](https://github.com/crewloom/bridge) | v2.2.5 repository release | Telegram and Console adapters; OpenCode integration and generic CLI wrappers. Other channels require separate adapters. The legacy AgentGram npm package is a separate distribution; installation names still need review. MIT. |
+| [Desktop Agent downloads](https://github.com/crewloom/crewloom.github.io/releases/latest) | v0.39.11 | Published desktop release. Private source versions may be newer; check release assets for platform availability. |
+| Pulse research | Component versions differ | Private local-routing research. The active Rust engine is lexical. Trained research artifacts are separate from the integrated runtime; benchmarks must identify backend, dataset and hardware. |
+| [Website](https://crewloom.org) | Source package 1.1.0 | English and Arabic product pages. Website source, deployed download metadata and Desktop releases have separate version identities. |
 
----
+## Scope and limits
 
-### Our Projects
+Role guides and working-memory contracts help structure agent work. They do not guarantee correct answers or prevent hallucinations.
 
-<!-- projects:start -->
-| Project | Status | Description | Repository |
-| :--- | :---: | :--- | :--- |
-| **Crewloom Core** | `v0.9.10` | 47 specialist agent roles, 24 registered tools, working memory contracts, MCP bridge, and isolated execution. Bilingual (EN/AR). Apache-2.0. | [Explore Toolkit →](https://github.com/crewloom/crewloom) |
-| **Crewloom Bridge** | `v2.2.3` | Omni-channel mediator & control room daemon. Connects local agent runs to remote chats with live status, context inspection, and QR pairing. | [Explore Bridge →](https://github.com/crewloom/bridge) |
-| **Crewloom Desktop Agent** | `v0.5.10` | Desktop app for agent work with roles, memory, and evidence. Proprietary runtime; downloads and release notes are published with the website. | [Download →](https://github.com/crewloom/crewloom.github.io/releases/latest) |
-| **Crewloom AI · Pulse** | `v0.2.0` | Local decision engine for routing agent work on-device (System 1). Research stage; private. | Private |
-| **Crewloom Website** | `v1.0.12` | Landing page and documentation at crewloom.org, in English and Arabic. | [crewloom.org →](https://crewloom.org) |
+Managed execution adds scoped isolation, declared inputs and outputs, and review evidence. These controls do not govern arbitrary agents with host access. See [Core enforcement boundaries](https://github.com/crewloom/crewloom/blob/main/documentation/ENFORCEMENT.md).
 
-<p align="center">
-<a href="https://github.com/crewloom/crewloom/releases"><img alt="crewloom releases" src="https://img.shields.io/github/v/release/crewloom/crewloom?label=crewloom&style=flat-square"></a> <a href="https://github.com/crewloom/crewloom/commits"><img alt="crewloom commits" src="https://img.shields.io/github/last-commit/crewloom/crewloom?label=updated&style=flat-square"></a><br>
-<a href="https://github.com/crewloom/bridge/releases"><img alt="bridge releases" src="https://img.shields.io/github/v/release/crewloom/bridge?label=bridge&style=flat-square"></a> <a href="https://github.com/crewloom/bridge/commits"><img alt="bridge commits" src="https://img.shields.io/github/last-commit/crewloom/bridge?label=updated&style=flat-square"></a><br>
-<a href="https://github.com/crewloom/crewloom.github.io/releases"><img alt="crewloom.github.io releases" src="https://img.shields.io/github/v/release/crewloom/crewloom.github.io?label=crewloom.github.io&style=flat-square"></a> <a href="https://github.com/crewloom/crewloom.github.io/commits"><img alt="crewloom.github.io commits" src="https://img.shields.io/github/last-commit/crewloom/crewloom.github.io?label=updated&style=flat-square"></a>
-</p>
-<!-- projects:end -->
+Local operation depends on the selected model provider, host and integrations. Cloud providers and remote communication channels have their own data handling. Working memory and logs can retain data locally. There is no blanket zero-retention, no-destruction or regulatory-compliance guarantee.
 
-### Recent releases
+## Release information
+
+Use each project's GitHub releases as its publication record. The [profile refresh workflow](https://github.com/crewloom/.github/actions/workflows/refresh-profile.yml) proposes release-table updates through a pull request; changes are not visible until merged. It does not synchronize every project version or the Arabic profile automatically.
 
 <!-- releases:start -->
 | Date | Release | Repository |
-| :--- | :--- | :--- |
-| 2026-11-01 | [Crewloom Desktop Agent v0.5.10](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.10) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Desktop Agent v0.5.6](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.5.6) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Core v0.9.10](https://github.com/crewloom/crewloom/releases/tag/v0.9.10) | `crewloom` |
-| 2026-10-31 | [Crewloom Core v0.9.9](https://github.com/crewloom/crewloom/releases/tag/v0.9.9) | `crewloom` |
-| 2026-10-31 | [Crewloom Desktop Agent v0.4.19](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.4.19) | `crewloom.github.io` |
-| 2026-10-31 | [Crewloom Core v0.9.8](https://github.com/crewloom/crewloom/releases/tag/v0.9.8) | `crewloom` |
+| --- | --- | --- |
+| 2026-11-22 | Crewloom Bridge v2.2.5 | bridge |
+| 2026-11-21 | Crewloom Core v0.9.24 | crewloom |
+| 2026-11-21 | Crewloom Desktop Agent v0.39.11 | crewloom.github.io |
 <!-- releases:end -->
-<sub>Refreshed daily from GitHub releases by <a href="https://github.com/crewloom/.github/actions/workflows/refresh-profile.yml">this workflow</a>.</sub>
 
----
+## Enterprise inquiries
 
-### 🏢 Enterprise & Commercial Solutions
+Contact [support@crewloom.org](mailto:support@crewloom.org) to discuss private deployments, custom roles and support requirements. Availability, deployment controls and service commitments must be agreed for the specific engagement.
 
-Crewloom offers dedicated enterprise engineering and commercial licensing through **[Rumuze](https://crewloom.org)**:
+## Security and community
 
-- **Private & Closed-Source Agent Fleets:** Tailored specialist roles, custom toolkits, and proprietary company skills.
-- **On-Premise & VPC Deployments:** Zero-telemetry, fully isolated agent architectures compliant with strict data residency and corporate security requirements.
-- **Production SLAs & Support:** Dedicated engineering support, proactive updates, and custom driver integrations for legacy internal tools.
-- **Consulting & Implementation:** End-to-end architecture advisory for organizations transitioning to agentic workflows.
-
-> For commercial inquiries, licensing, and enterprise pilot programs, please reach out to:  
-> **Email:** [support@crewloom.org](mailto:support@crewloom.org) | **Web:** [rumuze.com](https://crewloom.org)
-
----
-
-### Security & Privacy
-
-We treat security as a first-class requirement across all open-source and enterprise components:
-- **Zero-Data Retention:** Agents process data within your defined perimeter without unauthorized external sync.
-- **Coordinated Disclosure:** Review our [Security Policy](https://github.com/crewloom/.github/blob/main/SECURITY.md) to report vulnerabilities privately.
-- **Community Standards:** Built in accordance with our [Code of Conduct](https://github.com/crewloom/.github/blob/main/CODE_OF_CONDUCT.md).
+[Security policy](https://github.com/crewloom/.github/blob/main/SECURITY.md) · [Code of conduct](https://github.com/crewloom/.github/blob/main/CODE_OF_CONDUCT.md)
