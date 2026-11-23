@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('sync_docs', Path(__file__).with_name('sync-docs.py'))
 sync = importlib.util.module_from_spec(spec)
@@ -75,6 +76,47 @@ class SyncTests(unittest.TestCase):
         output.parent.mkdir()
         output.write_text('same')
         self.assertEqual(sync.publish(self.root, self.project['output'], 'same', 'crewloom/bridge'), 'unchanged')
+
+    def test_open_sync_pr_is_not_rewritten(self):
+        with patch.object(sync, 'run', return_value='[{"headRefName":"bot/manifest-docs-sync-old","url":"test"}]') as command:
+            self.assertIn('existing sync PR', sync.publish(self.root, self.project['output'], 'new', 'crewloom/bridge'))
+            self.assertEqual(command.call_count, 1)
+
+    def test_publish_stages_only_allowlisted_output(self):
+        calls = []
+        def command(*args, cwd=None):
+            calls.append(args)
+            if args[:3] == ('gh', 'pr', 'list'):
+                return '[]'
+            if args[:4] == ('git', 'diff', '--cached', '--name-only'):
+                return 'docs/CREWLOOM_FACTS.md'
+            if args[:3] == ('gh', 'pr', 'create'):
+                return 'review-pr'
+            return ''
+        with patch.object(sync, 'run', side_effect=command):
+            self.assertEqual(sync.publish(self.root, self.project['output'], 'new', 'crewloom/bridge'), 'review-pr')
+        self.assertIn(('git', 'add', '--', 'docs/CREWLOOM_FACTS.md'), calls)
+        self.assertFalse(any('--force' in str(call) or 'merge' in call for call in calls))
+        self.assertEqual((self.root / self.project['output']).read_text(), 'new')
+
+    def test_unexpected_staged_file_aborts_before_push(self):
+        calls = []
+        def command(*args, cwd=None):
+            calls.append(args)
+            if args[:3] == ('gh', 'pr', 'list'):
+                return '[]'
+            if args[:4] == ('git', 'diff', '--cached', '--name-only'):
+                return 'package.json'
+            return ''
+        with patch.object(sync, 'run', side_effect=command):
+            with self.assertRaises(ValueError):
+                sync.publish(self.root, self.project['output'], 'new', 'crewloom/bridge')
+        self.assertFalse(any('push' in call for call in calls))
+
+    def test_offline_preview_is_not_a_missing_release_claim(self):
+        rendered = sync.render([sync.collect(self.project, self.root, 'offline')])
+        self.assertIn('Not checked (offline preview)', rendered)
+        self.assertNotIn('No stable GitHub release found', rendered)
 
     def test_toml_project_version(self):
         (self.root / 'pyproject.toml').write_text('[project]\nname="core"\nversion="0.9.24"\n')
