@@ -8,6 +8,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import tempfile
+import time
 import tomllib
 import urllib.error
 import urllib.request
@@ -48,16 +49,25 @@ def load_manifest(path):
 
 
 def release(org, repo):
-    request = urllib.request.Request(f'https://api.github.com/repos/{org}/{repo}/releases/latest',
-                                     headers={'Accept': 'application/vnd.github+json', 'User-Agent': 'crewloom-docs-sync'})
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            value = json.load(response)
-        return {'tag': value['tag_name'], 'url': value['html_url'], 'published_at': value['published_at']}
-    except urllib.error.HTTPError as error:
-        if error.code == 404:
-            return None
-        raise
+    headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'crewloom-docs-sync'}
+    token = os.environ.get('GITHUB_TOKEN')
+    if token:
+        headers['Authorization'] = f'Bearer {token}'
+    request = urllib.request.Request(f'https://api.github.com/repos/{org}/{repo}/releases/latest', headers=headers)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                value = json.load(response)
+            return {'tag': value['tag_name'], 'url': value['html_url'], 'published_at': value['published_at']}
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return None
+            # Shared runner IPs can hit the unauthenticated rate limit; retry transient errors.
+            if error.code in (403, 429) or error.code >= 500:
+                if attempt < 2:
+                    time.sleep(2 * (attempt + 1))
+                    continue
+            raise
 
 
 def collect(project, checkout, latest):
