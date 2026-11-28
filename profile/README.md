@@ -32,10 +32,13 @@ Use each project's GitHub releases as its publication record. The [profile refre
 
 <!-- releases:start -->
 | Date | Release | Repository |
-| --- | --- | --- |
-| 2026-11-22 | Crewloom Bridge v2.2.5 | bridge |
-| 2026-11-21 | Crewloom Core v0.9.24 | crewloom |
-| 2026-11-21 | Crewloom Desktop Agent v0.39.11 | crewloom.github.io |
+| :--- | :--- | :--- |
+| 2026-11-25 | [Crewloom Desktop Agent v0.42.2](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.42.2) | `crewloom.github.io` |
+| 2026-11-24 | [Crewloom Core v0.9.25](https://github.com/crewloom/crewloom/releases/tag/v0.9.25) | `crewloom` |
+| 2026-11-24 | [Crewloom Bridge v2.2.6](https://github.com/crewloom/bridge/releases/tag/v2.2.6) | `bridge` |
+| 2026-11-22 | [Crewloom Bridge v2.2.5](https://github.com/crewloom/bridge/releases/tag/v2.2.5) | `bridge` |
+| 2026-11-21 | [Crewloom Core v0.9.24](https://github.com/crewloom/crewloom/releases/tag/v0.9.24) | `crewloom` |
+| 2026-11-21 | [Crewloom Desktop Agent v0.39.11](https://github.com/crewloom/crewloom.github.io/releases/tag/v0.39.11) | `crewloom.github.io` |
 <!-- releases:end -->
 
 ## Enterprise inquiries
